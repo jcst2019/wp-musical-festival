@@ -27,60 +27,49 @@ body{
 .custom-toggler {
   position: relative;
   border: none;
-  padding: 0;
   background: transparent;
+  padding: 0;
 }
 
 .custom-toggler:focus,
 .custom-toggler:active {
-  outline: 0;
+  outline: none;
   box-shadow: none;
 }
 
 .custom-toggler span {
   display: block;
-  background-color: var(--white-color);
   height: 3px;
   width: 25px;
-  margin: 4px 0;
-  position: relative;
-  transition: transform 0.35s ease-in-out, opacity 0.35s ease-in-out;
+  margin: 5px auto;
+  background-color: var(--white-color);
+  transition: transform 0.35s ease, opacity 0.35s ease;
 }
 
-/* Estado cerrado (tres líneas horizontales) */
+/* Estado inicial: tres líneas horizontales */
 .custom-toggler.collapsed span:nth-child(1) {
-  transform: rotate(0);
-  top: 0;
-  opacity: 1;
+  transform: translateY(0) rotate(0);
 }
 
 .custom-toggler.collapsed span:nth-child(2) {
-  visibility: visible;
   opacity: 1;
 }
 
 .custom-toggler.collapsed span:nth-child(3) {
-  transform: rotate(0);
-  top: 0;
-  opacity: 1;
+  transform: translateY(0) rotate(0);
 }
 
-/* Estado abierto (líneas formando una X) */
+/* Estado alternativo: "X" */
 .custom-toggler:not(.collapsed) span:nth-child(1) {
-  transform: rotate(45deg);
-  position: absolute;
-  top: 10px;
+  transform: translateY(8px) rotate(45deg);
 }
 
 .custom-toggler:not(.collapsed) span:nth-child(2) {
-  visibility: hidden;
   opacity: 0;
 }
 
 .custom-toggler:not(.collapsed) span:nth-child(3) {
-  transform: rotate(-45deg);
-  position: absolute;
-  top: 10px;
+  transform: translateY(-8px) rotate(-45deg);
 }
 
 .header{
