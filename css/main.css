@@ -191,8 +191,24 @@ html
   color: var(--white-color);
   text-transform: uppercase;
   font-weight: 700;
-  letter-spacing: 1px;
+  /* border-bottom: 1px dashed var(--main-bg-color); */
+  /* letter-spacing: 1px; */ /*Ya esta en la propiedad del html*/
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  font-size: 1.15rem;
 }
+
+  @media screen and (min-width:768px) {
+    .navbar-expand-lg .navbar-nav .nav-link{
+      border-bottom: 0;
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+    }
+  }
+  .nav-link:hover,
+  .nav-link.activate{
+    color: var(--main-bg-color);
+  }
 
 
 .icono-personalizado {
