@@ -32,12 +32,6 @@ html
     letter-spacing: calc(var(--letter-spacing) - 1px);
 }
 
-.navbar-brand img {
-  width:65%; /* Ajusta el tamaño según lo que necesites */
-  height: auto; /* Mantiene la proporción de la imagen */
-}
-
-
 .btn-primary{
   background-color: var(--main-bg-color);
   border-color: calc(var(--main-bg-color) - 1px);
@@ -122,6 +116,7 @@ html
     flex-direction: column;
     justify-content: center;
     height: calc(100% - 200px);
+    font-family: var(--secondary-font-family);    
     /* background-color: red; */
   }
   @media screen and (min-width:768px) {
@@ -143,6 +138,7 @@ html
     @media screen and (min-width:768px) {
       .header__information h2{
         text-align: left;
+        font-size: 4.5rem;
       }
     }
     .header__information strong{
@@ -174,7 +170,22 @@ html
         filter: var(--color-icon);
         margin-right: 10px; /* Aumenta la separación entre el img y el span */
     }
-      
+
+.navbar-brand{
+  max-width: 244px;
+}
+  @media screen and (min-width:768px) {
+    .navbar-brand{
+      max-width: 344px;
+    }
+}
+
+  /* 
+  .navbar-brand img {
+    width:65%; 
+    height: auto;
+  }    
+*/
 
 .nav-link{
   color: var(--white-color);
