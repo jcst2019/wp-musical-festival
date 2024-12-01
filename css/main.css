@@ -24,26 +24,29 @@ body{
     font-family: var(--secondary-font-family);
 }
 
+/* Área clicable del toggle (hamburguesa) */
 .custom-toggler {
   position: relative;
-  border: none;
+  width: 40px; /* Ajustar el tamaño del área clicable */
+  height: 30px; /* Ajustar la altura */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
   background: transparent;
+  border: none;
   padding: 0;
 }
 
-.custom-toggler:focus,
-.custom-toggler:active {
-  outline: none;
-  box-shadow: none;
-}
-
+/* Los tres spans que forman la hamburguesa */
 .custom-toggler span {
   display: block;
-  height: 3px;
-  width: 25px;
-  margin: 5px auto;
   background-color: var(--white-color);
-  transition: transform 0.35s ease, opacity 0.35s ease;
+  height: 4px; /* Grosor adecuado para los span */
+  width: 30px; /* Ancho ajustado */
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  border-radius: 4px;
 }
 
 /* Estado inicial: tres líneas horizontales */
@@ -61,15 +64,15 @@ body{
 
 /* Estado alternativo: "X" */
 .custom-toggler:not(.collapsed) span:nth-child(1) {
-  transform: translateY(8px) rotate(45deg);
+  transform: translateY(8px) rotate(45deg); /* Mueve la línea hacia abajo y rota */
 }
 
 .custom-toggler:not(.collapsed) span:nth-child(2) {
-  opacity: 0;
+  opacity: 0; /* Hace desaparecer la segunda línea */
 }
 
 .custom-toggler:not(.collapsed) span:nth-child(3) {
-  transform: translateY(-8px) rotate(-45deg);
+  transform: translateY(-8px) rotate(-45deg); /* Mueve la línea hacia arriba y rota */
 }
 
 .header{
