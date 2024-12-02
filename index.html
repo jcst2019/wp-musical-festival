@@ -157,7 +157,7 @@
         <section class="splide djs sectionBorder--top sectionBorder--bottom" id="djs-carousel">
             <article class="container">
               <div class="row">
-                <div class="col col-md-9 order-1 order-md-0">
+                <div class="col col-md-9 pl-0 order-1 order-md-0">
                   <!-- Elementos de Splide -->
                   <div class="splide__track">
                     <ul class="splide__list">
@@ -236,13 +236,13 @@
                   <ul class="list-unstyled d-flex justify-content-center justify-content-md-end">
                     <li class="mr-2">
                         <!-- js-splide-next => Clase personalizada para dar el movimiento del carrusel -->
-                      <a href="#" class="js-splide-next">
-                        <img src="img/derecha.png" alt="">
+                      <a href="#" class="js-splide-prev">
+                        <img src="img/derecha.png" alt="Anterior">
                       </a>
                     </li>
                     <li>
-                      <a href="#" class="js-splide-prev">
-                        <img src="img/izquierda.png" alt="">
+                      <a href="#" class="js-splide-next">
+                        <img src="img/izquierda.png" alt="Siguiente">
                       </a>
                     </li>
                   </ul>
@@ -275,15 +275,44 @@
                 },
                 arrows: false,  // Desactiva las flechas
                 pagination: false,   // Desactiva la paginación (puntos)
+                speed: 750, // Duración de la transición en milisegundos (por defecto es 400)
         } ).mount();
-        // Vincula los controles personalizados
-        document.querySelector('.js-splide-next').addEventListener('click', function (e) {
-            e.preventDefault();
-            splide.go('>');
+        
+        const prevButton = document.querySelector('.js-splide-prev');
+        const nextButton = document.querySelector('.js-splide-next');
+
+        // Deshabilitar los botones cuando se llegue al primer o último slide
+        function updateButtonState() {
+            if (splide.is('at', 'first')) {
+                prevButton.setAttribute('disabled', true); // Desactivar el botón de "prev"
+            } else {
+                prevButton.removeAttribute('disabled'); // Habilitar el botón de "prev"
+            }
+
+            if (splide.is('at', 'last')) {
+                nextButton.setAttribute('disabled', true); // Desactivar el botón de "next"
+            } else {
+                nextButton.removeAttribute('disabled'); // Habilitar el botón de "next"
+            }
+        }
+
+        // Inicializa el estado de los botones al cargar la página
+        updateButtonState();
+
+        // Actualizar el estado de los botones cada vez que el carrusel se mueva
+        splide.on('move', function () {
+            updateButtonState();
         });
-        document.querySelector('.js-splide-prev').addEventListener('click', function (e) {
+
+        // Vincula los controles personalizados
+        prevButton.addEventListener('click', function (e) {
             e.preventDefault();
             splide.go('<');
+        });
+
+        nextButton.addEventListener('click', function (e) {
+            e.preventDefault();
+            splide.go('>');
         });
     </script>  
     <!-- Instalar SLICK -->

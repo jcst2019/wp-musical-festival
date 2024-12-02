@@ -8,6 +8,7 @@
     --blue-dark-color:#060F20;
     --white-color:#ffffff;
     --black-color:#000000;
+    --gray-color:#3e3b3b;
 
     /* Fuentes */
     --main-font-family: "Saira", sans-serif;
@@ -309,6 +310,56 @@ html
     height: auto;
     filter: var(--color-icon-blue); /* Aplica el color azul a los íconos */
     margin-bottom: 10px; /* Espaciado entre el ícono y el texto */
+}
+
+.sectionBorder--top:before{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 10px;
+  height: 141px;
+  background-color: var(--main-bg-color);
+  content: "";
+}
+.sectionBorder--bottom:after{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 10px;
+  height: 141px;
+  background-color: var(--main-bg-color);
+  content: "";
+}
+
+.djs{
+  position: relative;
+  padding-top: var(--padding-section);
+  padding-bottom:  var(--padding-section);
+}
+  .djs__name{
+    font-family: var(--secondary-font-family);
+    font-weight: 400;
+    color: var(--black-color);
+    letter-spacing: var(--letter-spacing);
+    font-size: 1.8rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+  }
+  .djs_type{
+    font-family: var(--secondary-font-family);
+    font-weight: 300;
+    color: var(--gray-color);
+    font-size: 1rem;
+  }
+
+.splide__list {
+    display: flex;
+    gap: 15px; /* Espacio entre imágenes */
+}  
+.splide__slide img {
+  width: 100%;    /* Hace que la imagen ocupe todo el ancho de su contenedor */
+  height: 200px;  /* Ajusta la altura según lo que necesites */
+  object-fit: cover; /* Asegura que la imagen se recorte o se ajuste correctamente */
 }
 
 .title{
