@@ -5,6 +5,7 @@
     --main-bg-color-hover: #E25ABC;
     --secondary-color:#060F20;
     --blue-color:#53C7F0;
+    --blue-dark-color:#060F20;
     --white-color:#ffffff;
     --black-color:#000000;
 
@@ -15,7 +16,10 @@
     --letter-spacing: 2px;
     --padding-section:5rem;
     --color-icon:hue-rotate(0deg) saturate(100%) brightness(0) invert(25%) sepia(100%) saturate(500%) hue-rotate(-50deg);
-}
+    /* --color-icon-blue: hue-rotate(190deg) saturate(400%) brightness(1.2) sepia(100%) saturate(800%) hue-rotate(190deg); */
+    /* --color-icon-blue: invert(57%) sepia(27%) saturate(748%) hue-rotate(186deg) brightness(96%) contrast(92%); */
+    --color-icon-blue: invert(68%) sepia(79%) saturate(425%) hue-rotate(172deg) brightness(96%) contrast(91%);
+  }
 
 
 /* body{
@@ -279,6 +283,33 @@ html
           font-size: 1rem;
         } 
 
+.numbersEvents{
+  background-color: var(--blue-dark-color);
+  padding-top: var(--padding-section);
+  padding-bottom: var(--padding-section);
+  color: var(--white-color);
+}
+  .numbersEvents h5{
+    color: var(--blue-color);
+    font-family: var(--secondary-font-family);
+    font-size: 1.25rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .numbersEvents h6{
+    font-family: var(--main-font-family);
+    font-size: 2.125rem;
+    font-weight: 600;
+    margin-top: 0.7rem;
+    margin-bottom: 0.7rem;
+  }
+
+  .numbersEvents__icon {
+    width: 50px; /* Tamaño adecuado para íconos */
+    height: auto;
+    filter: var(--color-icon-blue); /* Aplica el color azul a los íconos */
+    margin-bottom: 10px; /* Espaciado entre el ícono y el texto */
+}
 
 .title{
   text-transform: uppercase;
