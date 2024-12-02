@@ -80,5 +80,18 @@
     <script src="js/fontawesome.min.js"></script>
     <!-- CDN de Bootstrap JS -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script> -->
+      <!-- Script personalizado -->
+    <script>
+    const togglerButton = document.querySelector('.navbar-toggler');
+    const navbarCollapse = document.querySelector('#navbarNavAltMarkup');
+    togglerButton.addEventListener('click', () => {
+        // navbarCollapse.classList.toggle('navbar--absolute');
+        // Mensaje emergente (opcional)
+        // alert('Has clickeado el botón de menú.');
+           // Alternamos la clase 'navbar--absolute' al contenedor del menú al hacer clic
+        // navbarCollapse.classList.toggle('navbar--absolute');
+        navbarCollapse.classList.add('navbar--absolute');
+      });
+    </script>
 </body>
 </html>
