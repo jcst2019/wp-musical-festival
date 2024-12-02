@@ -244,10 +244,18 @@ html
 }  
   .presentations p{
     color:  var(--blue-color);
-    font-weight: 700;
-    font-size: 1.2rem;
-    max-width: 660;
+    font-weight: 400;
+    font-size: 1rem;
+    max-width: 660px;
+    text-align: center;
   }
+    @media screen and (min-width:768px) {
+      .presentations p{
+        font-weight: 700;
+        font-size: 1.2rem;
+        text-align: left;
+      }
+    }
     .presentations__details{
       background-color: rgba(0, 0, 0, 0.6);
       padding-bottom: 0.5rem;
