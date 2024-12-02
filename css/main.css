@@ -244,6 +244,9 @@ html
 }  
   .presentations p{
     color:  var(--blue-color);
+    font-weight: 700;
+    font-size: 1.2rem;
+    max-width: 660;
   }
     .presentations__details{
       background-color: rgba(0, 0, 0, 0.6);
@@ -275,6 +278,14 @@ html
   font-size: 2.5rem;
   margin-bottom: 1.5rem;
 }
+  .title:after{
+    max-width: 170px;
+    width: 100%;
+    background-color: var(--main-bg-color);
+    height: 3px;
+    content: "";
+    display: block;
+  }
 
 .icono-personalizado {
     font-size: 5rem;
