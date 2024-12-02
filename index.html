@@ -163,7 +163,7 @@
                     <ul class="splide__list">
                       <li class="splide__slide">
                         <figure>
-                          <img src="img/dj5.jpeg" alt="DJs" class="img-fluid">
+                          <img src="img/dj1.jpeg" alt="DJs" class="img-fluid">
                           <figcaption>
                             <h5 class="djs__name">DJ Alexio</h5>
                             <h6 class="djs_type">Electro Hop</h6>
@@ -181,7 +181,7 @@
                       </li>
                       <li class="splide__slide">
                         <figure>
-                          <img src="img/dj5.jpeg" alt="DJs" class="img-fluid">
+                          <img src="img/dj1.jpeg" alt="DJs" class="img-fluid">
                           <figcaption>
                             <h5 class="djs__name">DJ Alexio</h5>
                             <h6 class="djs_type">Electro Hop</h6>
@@ -199,7 +199,7 @@
                       </li>
                       <li class="splide__slide">
                         <figure>
-                          <img src="img/dj5.jpeg" alt="DJs" class="img-fluid">
+                          <img src="img/dj1.jpeg" alt="DJs" class="img-fluid">
                           <figcaption>
                             <h5 class="djs__name">DJ Alexio</h5>
                             <h6 class="djs_type">Electro Hop</h6>
@@ -264,7 +264,27 @@
     <!-- Instalar Carrusel sin JQUERY -->
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <script>
-        new Splide( '#djs-carousel' ).mount();
+        // new Splide( '#djs-carousel' ).mount();
+        new Splide( '#djs-carousel', {
+                perPage    : 3,
+                breakpoints: {
+                    640: {
+                        perPage: 1,
+                    },
+                },
+                arrows: false,  // Desactiva las flechas
+                pagination: false,   // Desactiva la paginación (puntos)
+        } ).mount();
+        // document.addEventListener( 'DOMContentLoaded', function () {
+        // new Splide( '#djs-carousel', {
+        //         perPage    : 2,
+        //         breakpoints: {
+        //             640: {
+        //                 perPage: 1,
+        //             },
+        //         },
+        // } ).mount();
+        // } );
     </script>  
     <!-- Instalar SLICK -->
     <!-- <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
