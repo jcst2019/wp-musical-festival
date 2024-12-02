@@ -13,6 +13,10 @@
     <link rel="stylesheet" href="css/main.css">
     <!-- <link rel="stylesheet" href="css/fontawesome.min.css"> -->
     <link rel="stylesheet" href="css/all.min.css">
+    <!-- Instalar Carrusel sin JQUERY -->
+    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
+    <!-- Instalar Slick -->
+    <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/> -->
 <!-- </head> -->
 </head>
 <body>
@@ -150,14 +154,13 @@
                 </div>
             </div>
         </section> 
-        <section class="djs sectionBorder--top sectionBorder--bottom">
+        <section class="splide djs sectionBorder--top sectionBorder--bottom" id="djs-carousel">
             <article class="container">
-                <div class="row">
+                <div class="row splide__track">
                     <!-- order-1 order-md-0 Se invierta la posicion en mobile -->
                     <div class="col col-md-9 order-1 order-md-0">
-                        <ul class="list-unstyled">
-                            <djs__gallety>
-                                <li>
+                        <ul class="list-unstyled djs__gallety splide__list">
+                                <li class="splide__slide">
                                     <figure><img src="img/dj5.jpeg" alt="DJs" class="img-fluid">
                                         <figcaption>
                                             <h5 class="djs__name">DJ Alexio</h5>
@@ -165,7 +168,7 @@
                                         </figcaption>
                                     </figure>
                                 </li>
-                                <li>
+                                <li class="splide__slide">
                                     <figure><img src="img/dj5.jpeg" alt="DJs" class="img-fluid">
                                         <figcaption>
                                             <h5 class="djs__name">DJ Alexio</h5>
@@ -173,7 +176,7 @@
                                         </figcaption>
                                     </figure>
                                 </li>
-                                <li>
+                                <li class="splide__slide">
                                     <figure><img src="img/dj5.jpeg" alt="DJs" class="img-fluid">
                                         <figcaption>
                                             <h5 class="djs__name">DJ Alexio</h5>
@@ -181,7 +184,7 @@
                                         </figcaption>
                                     </figure>
                                 </li>
-                                <li>
+                                <li class="splide__slide">
                                     <figure><img src="img/dj5.jpeg" alt="DJs" class="img-fluid">
                                         <figcaption>
                                             <h5 class="djs__name">DJ Alexio</h5>
@@ -189,7 +192,7 @@
                                         </figcaption>
                                     </figure>
                                 </li>
-                                <li>
+                                <li class="splide__slide">
                                     <figure><img src="img/dj5.jpeg" alt="DJs" class="img-fluid">
                                         <figcaption>
                                             <h5 class="djs__name">DJ Alexio</h5>
@@ -197,7 +200,7 @@
                                         </figcaption>
                                     </figure>
                                 </li>
-                                <li>
+                                <li class="splide__slide">
                                     <figure><img src="img/dj5.jpeg" alt="DJs" class="img-fluid">
                                         <figcaption>
                                             <h5 class="djs__name">DJ Alexio</h5>
@@ -205,7 +208,7 @@
                                         </figcaption>
                                     </figure>
                                 </li>
-                                <li>
+                                <li class="splide__slide">
                                     <figure><img src="img/dj5.jpeg" alt="DJs" class="img-fluid">
                                         <figcaption>
                                             <h5 class="djs__name">DJ Alexio</h5>
@@ -213,7 +216,7 @@
                                         </figcaption>
                                     </figure>
                                 </li>
-                                <li>
+                                <li class="splide__slide">
                                     <figure><img src="img/dj5.jpeg" alt="DJs" class="img-fluid">
                                         <figcaption>
                                             <h5 class="djs__name">DJ Alexio</h5>
@@ -221,16 +224,15 @@
                                         </figcaption>
                                     </figure>
                                 </li>
-                            </djs__gallety>
                         </ul>   
                     </div>
-                    <div class="col col-md-3 order-0 order-md-1 djs__information">
-                        <h2 class="title title--black">
+                    <div class="col col-md-3 text-center text-md-rigth order-0 order-md-1 djs__information">
+                        <h2 class="title title--black  text-md-rigth">
                             DJs
                         </h2>
                         <p>Ellos son el verdadero foco de atención de nuestro evento</p>
-                        <ul class="list-unstyled">
-                            <li>
+                        <ul class="list-unstyled d-flex justify-content-center justify-content-md-end">
+                            <li class="mr-2">
                                 <a href="#"> 
                                     <img src="img/derecha.png" alt="">
                                 </a>
@@ -241,11 +243,26 @@
                                 </a>
                             </li>
                         </ul>
-                        <a href="#" class="btn btn-primary">Ver Todos</a>
+                        <a href="#" class="btn btn-primary d-none d-md-inline-block btn-lg mt-5">Ver Todos</a>
                     </div>  
                 </div>
             </article>
-        </section>    
+        </section>        
+        <section id="image-carousel" class="splide" aria-label="Beautiful Images">
+            <div class="splide__track">
+                  <ul class="splide__list">
+                      <li class="splide__slide">
+                          <img src="img/dj1.jpeg" alt="">
+                      </li>
+                      <li class="splide__slide">
+                          <img src="img/dj5.jpeg" alt="">
+                      </li>
+                      <li class="splide__slide">
+                          <img src="img/dj5.jpeg" alt="">
+                      </li>
+                  </ul>
+            </div>
+          </section>    
     </main>
     <!-- <h1>Hola Mundo</h1> -->
       <!-- uses solid style -->
@@ -257,7 +274,14 @@
     <script src="js/fontawesome.min.js"></script>
     <!-- CDN de Bootstrap JS -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script> -->
-      <!-- Script personalizado -->
+    <!-- Instalar Carrusel sin JQUERY -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script>
+        new Splide( '#djs-carousel' ).mount();
+    </script>  
+    <!-- Instalar SLICK -->
+    <!-- <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
+    <!-- Script personalizado -->
     <script>
     const togglerButton = document.querySelector('.navbar-toggler');
     const navbarCollapse = document.querySelector('#navbarNavAltMarkup');
