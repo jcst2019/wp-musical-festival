@@ -362,6 +362,12 @@ html
   object-fit: cover; /* Asegura que la imagen se recorte o se ajuste correctamente */
 }
 
+/* Estilo para los botones */
+.djs__information li {
+  margin: 0 10px; /* Añadir un margen a la izquierda y derecha de los botones */
+}
+
+
 .title{
   text-transform: uppercase;
   font-weight: 500;

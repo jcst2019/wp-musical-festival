@@ -233,7 +233,7 @@
                     DJs
                   </h2>
                   <p>Ellos son el verdadero foco de atención de nuestro evento</p>
-                  <ul class="list-unstyled d-flex justify-content-center justify-content-md-end">
+                  <ul class="list-unstyled d-flex justify-content-center justify-content-md-end ">
                     <li class="mr-2">
                         <!-- js-splide-next => Clase personalizada para dar el movimiento del carrusel -->
                       <a href="#" class="js-splide-prev">
@@ -277,32 +277,46 @@
                 pagination: false,   // Desactiva la paginación (puntos)
                 speed: 750, // Duración de la transición en milisegundos (por defecto es 400)
         } ).mount();
-        
+
+
         const prevButton = document.querySelector('.js-splide-prev');
         const nextButton = document.querySelector('.js-splide-next');
 
-        // Deshabilitar los botones cuando se llegue al primer o último slide
-        function updateButtonState() {
-            if (splide.is('at', 'first')) {
-                prevButton.setAttribute('disabled', true); // Desactivar el botón de "prev"
-            } else {
-                prevButton.removeAttribute('disabled'); // Habilitar el botón de "prev"
-            }
+        // // Función para actualizar el estado de los botones
+        // function updateButtonState() {
+        //     const totalImages = splide.length; // Total de imágenes en la galería
+        //     const imagesPerPage = 3; // Número de imágenes por iteración (página)
+        //     const totalPages = Math.ceil(totalImages / imagesPerPage); // Número total de páginas
 
-            if (splide.is('at', 'last')) {
-                nextButton.setAttribute('disabled', true); // Desactivar el botón de "next"
-            } else {
-                nextButton.removeAttribute('disabled'); // Habilitar el botón de "next"
-            }
-        }
+        //     // Calcular en qué página estamos
+        //     const currentPage = Math.floor(splide.index / imagesPerPage) + 1;
 
-        // Inicializa el estado de los botones al cargar la página
-        updateButtonState();
+        //     // Controlar el botón de "prev"
+        //     if (currentPage === 1) {
+        //         prevButton.setAttribute('disabled', true); // Desactivar el botón "prev"
+        //         // prevButton.style.display = 'none'; // Ocultar el botón "prev"
+        //     } else {
+        //         prevButton.removeAttribute('disabled'); // Habilitar el botón "prev"
+        //         // prevButton.style.display = ''; // Mostrar el botón "prev"
+        //     }
 
-        // Actualizar el estado de los botones cada vez que el carrusel se mueva
-        splide.on('move', function () {
-            updateButtonState();
-        });
+        //     // Controlar el botón de "next"
+        //     if (currentPage === totalPages) {
+        //         nextButton.setAttribute('disabled', true); // Desactivar el botón "next"
+        //         // nextButton.style.display = 'none'; // Ocultar el botón "next"
+        //     } else {
+        //         nextButton.removeAttribute('disabled'); // Habilitar el botón "next"
+        //         // nextButton.style.display = ''; // Mostrar el botón "next"
+        //     }
+        // }
+
+        // // Actualiza los botones después de que el carrusel se haya montado
+        // updateButtonState();
+
+        // // Actualizar el estado de los botones cada vez que el carrusel se mueva
+        // splide.on('move', function () {
+        //     updateButtonState();
+        // });
 
         // Vincula los controles personalizados
         prevButton.addEventListener('click', function (e) {
