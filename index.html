@@ -312,36 +312,39 @@
         </section>
         <section class="sponsors">
           <article class="container">
-              <h2 class="title title--white title--small text-md-end">Patrocinadores</h2>
-              <div class="row">
-                <div class="col md-10 order-1 order-md-0">
-                  <div class="soponsors__gallery">
-                    <div><img src="img/sponsor_logo_01.png" class="img-fluid"></div>
-                    <div><img src="img/sponsor_logo_02.png" class="img-fluid"></div>
-                    <div><img src="img/sponsor_logo_03-u3079-r-fr.png" class="img-fluid"></div>
-                    <div><img src="img/sponsor_logo_04.png" class="img-fluid"></div>
-                    <div><img src="img/sponsor_logo_05.png" class="img-fluid"></div>
-                    <div><img src="img/sponsor_logo_06.png" class="img-fluid"></div>
+            <h2 class="title title--white title--small text-md-end">Patrocinadores</h2>
+            <div class="row">
+              <div class="col-md-10 order-1 order-md-0">
+                <div id="sponsors-carousel" class="splide sponsors__gallery">
+                  <div class="splide__track">
+                    <ul class="splide__list">
+                      <li class="splide__slide"><img src="img/sponsor_logo_01.png" class="img-fluid"></li>
+                      <li class="splide__slide"><img src="img/sponsor_logo_02.png" class="img-fluid"></li>
+                      <li class="splide__slide"><img src="img/sponsor_logo_03-u3079-r-fr.png" class="img-fluid"></li>
+                      <li class="splide__slide"><img src="img/sponsor_logo_04.png" class="img-fluid"></li>
+                      <li class="splide__slide"><img src="img/sponsor_logo_05.png" class="img-fluid"></li>
+                      <li class="splide__slide"><img src="img/sponsor_logo_06.png" class="img-fluid"></li>
+                    </ul>
                   </div>
                 </div>
-                <div class="col col-md-2 order-0 order-md-1">
-                  <ul class="list-unstyled d-flex justify-content-center justify-content-md-end mb-4 ">
-                    <li class="mr-2">
-                        <!-- js-splide-next => Clase personalizada para dar el movimiento del carrusel -->
-                      <a href="#" class="js-splideSponsors-prev">
-                        <img src="img/derecha.png" alt="Anterior">
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" class="js-splideSponsors-next">
-                        <img src="img/izquierda.png" alt="Siguiente">
-                      </a>
-                    </li>
-                  </ul>
-                </div>
               </div>
+              <div class="col-md-2 order-0 order-md-1">
+                <ul class="list-unstyled d-flex justify-content-center justify-content-md-end mb-4">
+                  <li class="mr-2">
+                    <a href="#" class="js-splideSponsors-prev">
+                      <img src="img/derecha.png" alt="Anterior">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="js-splideSponsors-next">
+                      <img src="img/izquierda.png" alt="Siguiente">
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </article>
-        </section>   
+        </section>         
     </main>
     <!-- <h1>Hola Mundo</h1> -->
       <!-- uses solid style -->
@@ -419,6 +422,32 @@
             e.preventDefault();
             splide.go('>');
         });
+
+        const splideSponsor = new Splide('#sponsors-carousel', {
+        perPage: 3,
+        breakpoints: {
+          640: {
+            perPage: 1,
+          },
+        },
+        arrows: false, // Desactiva las flechas internas de Splide
+        pagination: false, // Desactiva la paginación
+        speed: 750, // Duración de la transición
+      }).mount();
+
+      // Agregar funcionalidad a los botones de navegación personalizados
+      const prevButtonSponsor = document.querySelector('.js-splideSponsors-prev');
+      const nextButtonSponsor = document.querySelector('.js-splideSponsors-next');
+
+      prevButtonSponsor.addEventListener('click', function (e) {
+        e.preventDefault();
+        splideSponsor.go('<');
+      });
+
+      nextButtonSponsor.addEventListener('click', function (e) {
+        e.preventDefault();
+        splideSponsor.go('>');
+      });
     </script>  
     <!-- Instalar SLICK -->
     <!-- <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
