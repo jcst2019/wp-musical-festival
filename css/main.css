@@ -525,6 +525,7 @@ html
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 600;
+    line-height: 1.5;
     /* letter-spacing: var(calc(--letter-spacing)-1px); */
   }
   .news__item p{
