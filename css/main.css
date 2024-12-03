@@ -535,6 +535,14 @@ html
     /* letter-spacing: var(calc(--letter-spacing)-1px); */
   }
 
+.footer{
+  background-color: var(--blue-dark-color);
+  color: var(--white-color);
+  /* Con esta propiedad se evita que la imagen salga de la pantalla */
+  overflow: hidden;
+  text-align: center;
+}  
+
 .icono-personalizado {
     font-size: 5rem;
     color: blueviolet;
