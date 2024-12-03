@@ -5,7 +5,8 @@
     --main-bg-color-hover: #E25ABC;
     --secondary-color:#060F20;
     --blue-color:#53C7F0;
-    --blue-dark-color:#060F20;
+    /* --blue-dark-color:#060F20; */
+    --blue-dark-color:#0b121f;
     --white-color:#ffffff;
     --black-color:#000000;
     --gray-color:#3e3b3b;
@@ -367,6 +368,11 @@ html
   margin: 0 10px; /* Añadir un margen a la izquierda y derecha de los botones */
 }
 
+.tickets li img {
+  transform: scale(2.5); /*Aumenta el valor para hacerlos más grandes */
+  filter: var(--color-icon-blue);
+  margin-right: 10px; /* Aumenta la separación entre el img y el span */
+}
 
 .title{
   text-transform: uppercase;
@@ -382,6 +388,30 @@ html
     content: "";
     display: block;
   }
+
+.tickets{
+  background-color: var(--blue-dark-color);
+  color: var(--white-color);
+  padding-top: var(--padding-section);
+  padding-bottom: var(--padding-section);
+}
+
+  .tickets__price{
+    background-color: #24243C;
+    text-align: center;
+    padding: calc(var(--padding-section) - 3rem);
+    margin: calc(var(--padding-section) - 4rem);
+    transition: all .3s ease-in-out;
+
+  }
+  .tickets__price:hover{
+    background-color: var(--blue-dark-color);
+    border: 1px dashed #24243C;
+  }
+
+.subtitle{
+  color: var(--blue-color);
+}
 
 .icono-personalizado {
     font-size: 5rem;
