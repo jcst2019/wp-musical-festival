@@ -447,6 +447,17 @@ html
   color: var(--blue-color);
 }
 
+.sponsors{
+  background-image: url("../img/sponsors.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: auto;
+  padding-top: var(--padding-section);
+  padding-bottom: var(--padding-section);
+}
+
 .icono-personalizado {
     font-size: 5rem;
     color: blueviolet;
