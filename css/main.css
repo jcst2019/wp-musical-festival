@@ -509,12 +509,15 @@ html
   padding-top: var(--padding-section);
   padding-bottom: var(--padding-section);
 } 
+  .news__item {
+    letter-spacing: var(calc(--letter-spacing)-1px);
+  }
   .news__item figcaption {
     color: var(--main-bg-color);
     font-family: var(--secondary-font-family);
     margin-top: 1rem;
     margin-bottom: 1rem;
-    letter-spacing: var(calc(--letter-spacing)-1px);
+    /* letter-spacing: var(calc(--letter-spacing)-1px); */
   }
 
   .news__item a{
@@ -522,13 +525,13 @@ html
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 600;
-    letter-spacing: var(calc(--letter-spacing)-1px);
+    /* letter-spacing: var(calc(--letter-spacing)-1px); */
   }
   .news__item p{
     color: var(--blue-color);
     text-transform: uppercase;
     font-weight: 300;
-    letter-spacing: var(calc(--letter-spacing)-1px);
+    /* letter-spacing: var(calc(--letter-spacing)-1px); */
   }
 
 .icono-personalizado {
