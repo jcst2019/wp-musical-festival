@@ -369,7 +369,7 @@ html
 }
 
 .tickets li img {
-  transform: scale(2.5); /*Aumenta el valor para hacerlos más grandes */
+  /* transform: scale(2.5); Aumenta el valor para hacerlos más grandes */
   filter: var(--color-icon-blue);
   margin-right: 10px; /* Aumenta la separación entre el img y el span */
 }
@@ -408,6 +408,40 @@ html
     background-color: var(--blue-dark-color);
     border: 1px dashed #24243C;
   }
+
+  .tickets__value li{
+    margin-right: 0.5rem;
+  }
+
+  .tickets__value li.tickets__value--only{
+    margin-right: 0;
+  }
+
+  .tickets__number{
+    color: var(--blue-color);
+    font-size: 3rem;
+    font-weight: 600;
+  }
+    .tickets__number:before{
+      content: " $ ";
+    }
+    .tickets__number:after{
+      content: " USD ";
+      font-size: 1rem;
+    }
+
+.text--red{
+  color: #E35A78;
+}
+
+.text--pink{
+  color: #E25ABC;
+
+}  
+
+.text--purple{
+  color:#7E5AE2;
+}  
 
 .subtitle{
   color: var(--blue-color);
